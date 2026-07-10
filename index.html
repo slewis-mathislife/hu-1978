@@ -62,7 +62,7 @@
     letter-spacing:-.5px;margin-bottom:10px;text-shadow:0 2px 18px rgba(0,0,0,.25);
   }
   .hero h1 .num{
-    display:block;font-size:clamp(3rem,11vw,5.6rem);color:var(--apricot);
+    display:block;font-size:clamp(3rem,11vw,5.6rem);color:var(--orange);
     -webkit-text-stroke:1px rgba(255,255,255,.4);
   }
   .hero .sub{
@@ -192,7 +192,7 @@
     appearance:none;-webkit-appearance:none;min-width:24px;height:24px;margin-top:2px;
     border:2px solid var(--apricot);border-radius:50%;cursor:pointer;position:relative;transition:all .18s}
   label.person input:checked{background:var(--orange);border-color:var(--orange);transform:scale(1.05)}
-  label.person input:checked::after{content:"🤝";position:absolute;inset:0;font-size:12px;display:flex;align-items:center;justify-content:center}
+  label.person input:checked::after{content:"🤝🏾";position:absolute;inset:0;font-size:12px;display:flex;align-items:center;justify-content:center}
   .who-body{display:flex;flex-direction:column;gap:2px}
   .person .who-role{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:700}
   .person .who-name{font-size:1rem;color:var(--ink);font-weight:700;line-height:1.2}
@@ -273,6 +273,22 @@
   .bingo-status{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--green-deep);margin-top:12px;min-height:1.2em}
   .convo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:8px}
   .convo .q{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--apricot);border-radius:10px;padding:.9rem 1.1rem;font-family:"Georgia",serif;font-weight:600;font-size:.92rem;box-shadow:0 1px 3px rgba(47,92,151,.05)}
+  .convo .q{display:flex;flex-direction:column}
+  .q .q-text{display:block;margin-bottom:.55rem}
+  .q-ans{width:100%;border:1px solid var(--line);border-radius:8px;padding:.5rem .6rem;font-family:"Georgia",serif;font-weight:400;font-size:.9rem;color:var(--ink);background:var(--peach);resize:vertical;min-height:2.6rem}
+  .q-ans:focus{outline:2px solid var(--apricot);outline-offset:1px;background:#fff}
+  .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 6px}
+  .contact-form input{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.9rem;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem;background:var(--white)}
+  .contact-form input:focus{outline:2px solid var(--apricot);outline-offset:1px}
+  .contact-form #c-add{grid-column:1 / -1;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:.9rem;color:#fff;background:var(--orange);border:none;border-radius:30px;padding:.8rem;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .contact-form #c-add:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(194,83,26,.28)}
+  .contact-list{display:grid;gap:10px;margin-top:10px}
+  .contact-card{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;padding:12px 15px;box-shadow:0 1px 3px rgba(47,92,151,.05)}
+  .contact-card .cc-name{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--green-deep);font-size:1rem}
+  .contact-card .cc-meta{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.86rem;color:#5c584f;margin-top:3px}
+  .contact-card .cc-meta a{color:var(--green);text-decoration:none;font-weight:600}
+  .contact-card .cc-del{flex-shrink:0;background:none;border:none;color:#b6ad9f;font-size:1.3rem;line-height:1;cursor:pointer;padding:0 2px}
+  .contact-card .cc-del:hover{color:var(--orange)}
 
   .event-site{
     display:block;text-align:center;text-decoration:none;
@@ -329,7 +345,7 @@
   .aff-close{position:absolute;top:.7rem;right:1rem;background:none;border:none;font-size:1.4rem;color:#8a8074;cursor:pointer;line-height:1}
 
   @media(max-width:640px){
-    .cards2,.convo{grid-template-columns:1fr}
+    .cards2,.convo,.contact-form{grid-template-columns:1fr}
     .names{columns:2}
     .bingo{grid-template-columns:repeat(3,1fr)}
   }
@@ -439,7 +455,7 @@
     </div>
     <div class="infocard" style="margin-top:14px">
       <div class="k">Weekend Dress Code at a Glance</div>
-      <p><b>Friday:</b> wear a college T-shirt · <b>Saturday:</b> Southern Collegiate Brunch palette (above) · <b>Sunday:</b> your Sunday's best for worship, then your 2026 Hankerson Reunion tee for the family picnic.</p>
+      <p><b>Friday:</b> wear a college T-shirt · <b>Saturday:</b> Southern Collegiate Brunch palette (above) · <b>Sunday:</b> your Sunday's best for worship, then your 2026 Hankerson Reunion tee for the family cookout.</p>
     </div>
   </div>
 </section>
@@ -447,7 +463,7 @@
 <!-- ============ FACULTY ============ -->
 <section class="panel" id="faculty">
   <div class="wrap">
-    <h2 class="sec">Meet the Faculty 🤝</h2>
+    <h2 class="sec">Meet the Faculty 🤝🏾</h2>
     <p class="sec-lead">Every great university runs on the people behind the scenes. Tap a card once you've found them and said thank you this weekend. Let's make sure no one goes unrecognized.</p>
     <div class="progress">
       <span id="faculty-label">0 of 0 thanked</span>
@@ -554,13 +570,20 @@
     <div class="util"><button id="bingo-reset">Reset board</button></div>
 
     <h3 style="font-family:'Georgia',serif;color:var(--green-deep);font-size:1.3rem;margin:30px 0 4px">Conversation Starters</h3>
-    <p style="font-family:'Helvetica Neue',Arial,sans-serif;color:#6a6055;font-size:.9rem">Use these at brunch, on the beach, or around the dinner table.</p>
+    <p style="font-family:'Helvetica Neue',Arial,sans-serif;color:#6a6055;font-size:.9rem">Use these at brunch, on the beach, or around the dinner table. Jot your own answers below, they save on this device.</p>
     <div class="convo" id="convo"></div>
 
-    <div class="cards2" style="margin-top:24px">
-      <div class="infocard"><div class="k">Find Your Branch</div><p style="font-size:.9rem">Head to Our Legacy, find your branch of Paul &amp; Susie's descendants on the family tree, and add anyone born since it was last updated.</p></div>
-      <div class="infocard"><div class="k">People I Met This Weekend</div><p style="font-size:.9rem">Bring a pen: collect names, faces, and one fun fact from every new (or newly reconnected) cousin.</p></div>
+    <div class="infocard" style="margin-top:24px"><div class="k">Find Your Branch</div><p style="font-size:.9rem">Head to Our Legacy, find your branch of Paul &amp; Susie's descendants on the family tree, and add anyone born since it was last updated.</p></div>
+
+    <h3 style="font-family:'Georgia',serif;color:var(--green-deep);font-size:1.3rem;margin:30px 0 4px">People I Met This Weekend</h3>
+    <p style="font-family:'Helvetica Neue',Arial,sans-serif;color:#6a6055;font-size:.9rem">Met a new or newly reconnected cousin? Add them here so you can stay in touch. Saved on this device only.</p>
+    <div class="contact-form">
+      <input id="c-name" type="text" placeholder="Name" autocomplete="off">
+      <input id="c-phone" type="tel" placeholder="Phone number" autocomplete="off">
+      <input id="c-social" type="text" placeholder="Social handle (e.g. @cousinj)" autocomplete="off">
+      <button id="c-add" type="button">+ Add contact</button>
     </div>
+    <div id="contact-list" class="contact-list"></div>
   </div>
 </section>
 
@@ -590,7 +613,7 @@
     <div class="info-block">
       <h4>🔗 Weekend Links</h4>
       <div class="info-row"><div class="when">Sunday Worship</div><div class="what"><b>Ivy Baptist Church</b><br><a href="https://www.ivybaptistchurch.org/" target="_blank" rel="noopener">Check out the church we will visit →</a></div></div>
-      <div class="info-row"><div class="when">Sunday Family Picnic</div><div class="what"><b>Buckroe Beach</b><br><a href="https://www.google.com/maps/@37.0403444,-76.2913094,3a,47.8y,110.74h,93.68t/data=!3m8!1e1!3m6!1sAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g%3Dw203-h100-k-no-pi-0-ya250.37595-ro0-fo100!7i10670!8i5335" target="_blank" rel="noopener">Virtual tour of Buckroe Beach →</a></div></div>
+      <div class="info-row"><div class="when">Sunday Family Cookout</div><div class="what"><b>Buckroe Beach</b><br><a href="https://www.google.com/maps/@37.0403444,-76.2913094,3a,47.8y,110.74h,93.68t/data=!3m8!1e1!3m6!1sAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g%3Dw203-h100-k-no-pi-0-ya250.37595-ro0-fo100!7i10670!8i5335" target="_blank" rel="noopener">Virtual tour of Buckroe Beach →</a></div></div>
     </div>
 
     <div class="info-block">
@@ -661,15 +684,16 @@ const catalog=[
   ]},
   {d:"19",m:"Sun",title:"Closing Term",theme:"Sunday's Best · then your 2026 Tee",slots:[
     {code:"REL 110",event:"Worship Service",time:"Sunday Morning",loc:"Ivy Baptist Church",note:"A time of gratitude and reflection to close the weekend.",dress:"Wear your Sunday's best.",link:"https://www.ivybaptistchurch.org/",linkText:"Check out the church we will visit →"},
-    {code:"REC 325",event:"Family Picnic",time:"Sunday Afternoon",loc:"Buckroe Beach",note:"After worship we gather at the beach for our family picnic, the closing celebration of the weekend.",dress:"Wear your 2026 Hankerson Reunion T-shirt.",link:"https://www.google.com/maps/@37.0403444,-76.2913094,3a,47.8y,110.74h,93.68t/data=!3m8!1e1!3m6!1sAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g%3Dw203-h100-k-no-pi-0-ya250.37595-ro0-fo100!7i10670!8i5335",linkText:"Virtual tour of Buckroe Beach →"}
+    {code:"REC 325",event:"Family Cookout",time:"Sunday Afternoon",loc:"Buckroe Beach",note:"After worship we gather at the beach for our family cookout, the closing celebration of the weekend.",dress:"Wear your 2026 Hankerson Reunion T-shirt.",link:"https://www.google.com/maps/@37.0403444,-76.2913094,3a,47.8y,110.74h,93.68t/data=!3m8!1e1!3m6!1sAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPmzkFaL5ECR_ZO-f04-JXXd9wPhhbxTgLxAs7g%3Dw203-h100-k-no-pi-0-ya250.37595-ro0-fo100!7i10670!8i5335",linkText:"Virtual tour of Buckroe Beach →"}
   ]}
 ];
 const faculty=[
   ["University President","Jesus Christ","Who is the head of our lives."],
+  ["Dean of Spiritual Alignment","Latoyor Owens","Booked our Sunday house of worship and keeps the whole family prayed up, grounded, and pointed toward grace all weekend."],
   ["Dean of Convocation","Tara DeLoach","Opens and closes each gathering, keeping the weekend's spirit and schedule in step."],
   ["Dean of Operations & Special Events","Keishon Graham","Coordinates the weekend's events and keeps everything running smoothly."],
   ["Dean of University Branding","Lashauna Bolden Morris","Oversees the reunion's look, apparel, and family branding."],
-  ["Dean of Student Affairs","Shantae Bolden Fitzgerald","Looks after the family's experience and keeps the weekend on schedule."],
+  ["Dean of Admissions & Registration","Shantae Bolden Fitzgerald","Handles check-in and registration, making sure every family member is counted, welcomed, and added to the roll."],
   ["Director of Student Success & Alumni Relations","Sharmaine Lewis","Keeps in touch with family near and far, and welcomes first-time attendees."],
   ["Photographer / University Archivist","Everyone","Photograph and preserve this year's memories for the family record."],
   ["Dean of Movement & Wellness","George \u201cSteps\u201d Williams","Leads the Hankerson University Walking Club and Family Olympics."]
@@ -681,7 +705,7 @@ const campus=[
   ["Dining Hall","Saturday Banquet / Brunch"],
   ["Recreation Center","Beach Day & Family Olympics"],
   ["Chapel","Sunday worship service"],
-  ["Campus Green","Sunday Family Picnic"]
+  ["Campus Green","Sunday Family Cookout"]
 ];
 const swatches=[["Burnt Orange","#C2531A"],["Apricot","#E9A05A"],["Ivory","#F3EBDD"],["Camel","#C6A175"],["Navy","#26385C"],["Emerald","#1F6E52"],["Burgundy","#7C2331"],["Blush","#E8B5AE"]];
 const timeline=[
@@ -733,9 +757,9 @@ const timeline=[
   ["2025","Fort Lauderdale, FL · Ellisica Cannon"],
   ["2026","Hampton, VA · Sister-Cousin Connection · 48th Reunion","hl"]
 ];
-const memory=["Maybelle Hankerson Bennett","Paul Hankerson","Robbie Taylor","Susie Hankerson","Leon Butts","David Hankerson","Jessie Hankerson","Samuel Hankerson, Sr.","Lillie H. Wagstaff","Estella Hankerson","Iris Hankerson Young","Rufus Hankerson","Tom Hankerson","Leroy Hankerson","Jessie Lee Hankerson Williams","Danner Hankerson","Berry Lee Hankerson","Johnnie Williams","Johnnie Williams Jr.","Earl Jackson","Lamar Whaley Sr.","Edwards Hankerson","Kerri Webb","Sidney Hankerson","Ida Hankerson","Norris Hankerson","Wilson Hankerson","Harvey Hankerson","Barbara H. Morgan","Lillie Mae Harden","Paul S. Hankerson","Lois Taylor","Ruby Hoover","JoAnn H. Roach","Joseph Williams","Kenneth Williams","Ben Hankerson","Frances Hankerson","Luvina Carr","Larry Williams","Dwayne Harrigan","John A. Hankerson","David Hankerson Jr.","Almeta Hankerson DeLoach","Gwendolyn Hankerson","Anthony Williams","Lamar Whaley Jr.","Donnell Hankerson","Jannie DeLoach","Joe L. Hankerson","Mattie Sue Mathis","Pearl Hankerson","Ronald Lamb","Alphonso Hankerson Sr.","Ron Chrissy","Lamar Whaley","Ernest Graham","Sheila Graham","Phyliss Hankerson","Mary Ann Green","Mary Hankerson","Elizabeth Hankerson Howell","Gladys Hankerson Whaley","Brenda Hankerson Slaughter","Darshay Ward","Bracy Jones","Carol Hankerson Jones","Eric Jerome Mathis","Marian Hankerson","Willie C. Hankerson","Toni Cricket Williams","Michael Butts"];
+const memory=["Maybelle Hankerson Bennett","Paul Hankerson","Robbie Taylor","Susie Hankerson","Leon Butts","David Hankerson","Jessie Hankerson","Samuel Hankerson, Sr.","Lillie H. Wagstaff","Estella Hankerson","Iris Hankerson Young","Rufus Hankerson","Tom Hankerson","Leroy Hankerson","Jessie Lee Hankerson Williams","Danner Hankerson","Berry Lee Hankerson","Johnnie Williams","Johnnie Williams Jr.","Earl Jackson","Lamar Whaley Sr.","Edwards Hankerson","Kerri Webb","Sidney Hankerson","Ida Hankerson","Norris Hankerson","Wilson Hankerson","Harvey Hankerson","Barbara H. Morgan","Lillie Mae Harden","Paul S. Hankerson","Lois Taylor","Ruby Hoover","JoAnn H. Roach","Joseph Williams","Kenneth Williams","Ben Hankerson","Frances Hankerson","Luvina Carr","Larry Williams","Dwayne Harrigan","John A. Hankerson","David Hankerson Jr.","Almeta Hankerson DeLoach","Gwendolyn Hankerson","Anthony Williams","Lamar Whaley Jr.","Donnell Hankerson","Jannie DeLoach","Joe L. Hankerson","Mattie Sue Mathis","Pearl Hankerson","Ronald Lamb","Alphonso Hankerson Sr.","Ron Chrissy","Lamar Whaley","Ernest Graham","Sheila Graham","Phyliss Hankerson","Mary Ann Green","Mary Hankerson","Elizabeth Hankerson Howell","Gladys Hankerson Whaley","Brenda Hankerson Slaughter","Darshay Ward","Bracy Jones","Carol Hankerson Jones","Eric Jerome Mathis","Marian Hankerson","Willie C. Hankerson","Toni Cricket Williams","Michael Butts","Gwen Porter","Charles Hankerson"];
 const bingoWords=["Wore a college shirt","Hugged 3+ cousins","Took a yearbook photo","Tried the brunch buffet","Met a new cousin","Danced at the tailgate","Wore the 2026 tee","Heard an old family story","Took a beach photo","Signed the autograph page","Complimented an outfit","Sang along to a song","FREE · Family Love","Found their tree branch","Took a nap mid-day","Helped set up or clean up","Wore the color palette","Told a joke that landed","Prayed at worship service","Left a note in the Legacy book","Reconnected with a cousin","Ate seconds at the cookout","Took a group photo","Asked an elder a question","Said 'see you next year'"];
-const convo=["What's your favorite memory from a past reunion?","Who in the family do you think you're most like, and why?","What's a family recipe you hope never gets lost?","What's one story you've heard about 1978 that you love?","What do you hope the Hankerson family looks like in 20 years?","Who taught you the most about what it means to be family?","What's a tradition you'd like to see added to future reunions?","What's your earliest memory of a Hankerson reunion?"];
+const convo=["What's your favorite memory from a past reunion?","Who in the family do you think you're most like, and why?","What's a family recipe you hope never gets lost?","What's one story you've heard about 1978 that you love?","What do you hope the Hankerson family looks like in 20 years?","Who taught you the most about what it means to be family?","What's a tradition you'd like to see added to future reunions?","What's your earliest memory of a Hankerson reunion?","My favorite reunion memory so far is...","One family tradition I never want us to lose is...","The person I most want to reconnect with this weekend is...","Something I hope the younger cousins always remember about our family is..."];
 const affirmations=[
   "You come from people who gathered on purpose. That love lives in you.",
   "You are a branch of a tree with deep, unshakable roots.",
@@ -849,7 +873,37 @@ document.getElementById("tl").innerHTML=timeline.map(t=>
 document.getElementById("memory-names").innerHTML=memory.map(n=>`<span>${n}</span>`).join("");
 
 /* ---------------- RENDER: ENGAGE ---------------- */
-document.getElementById("convo").innerHTML=convo.map(q=>`<div class="q">${q}</div>`).join("");
+document.getElementById("convo").innerHTML=convo.map((q,i)=>`<div class="q"><span class="q-text">${q}</span><textarea class="q-ans" data-i="${i}" rows="2" placeholder="Your answer..."></textarea></div>`).join("");
+/* saved answers for conversation starters */
+const AKEY="hankerson_v2_answers";
+let aState=Store.load(AKEY,{});
+document.querySelectorAll(".q-ans").forEach(t=>{if(aState[t.dataset.i]!=null)t.value=aState[t.dataset.i];});
+document.getElementById("convo").addEventListener("input",e=>{const t=e.target.closest(".q-ans");if(!t)return;aState[t.dataset.i]=t.value;Store.save(AKEY,aState);});
+
+/* ---------------- CONTACTS: People I Met ---------------- */
+const CONTACTS_KEY="hankerson_v2_contacts";
+let contacts=Store.load(CONTACTS_KEY,[]);
+const contactList=document.getElementById("contact-list");
+function escHtml(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function renderContacts(){
+  if(!contacts.length){contactList.innerHTML='<p style="font-family:\'Helvetica Neue\',Arial,sans-serif;color:#8a8074;font-size:.85rem;font-style:italic">No contacts yet. Add someone you met above.</p>';return;}
+  contactList.innerHTML=contacts.map((c,i)=>{
+    const phone=c.phone?`<div class="cc-meta">📱 <a href="tel:${escHtml(c.phone)}">${escHtml(c.phone)}</a></div>`:"";
+    const social=c.social?`<div class="cc-meta">💬 ${escHtml(c.social)}</div>`:"";
+    return `<div class="contact-card"><div><div class="cc-name">${escHtml(c.name)}</div>${phone}${social}</div><button class="cc-del" data-i="${i}" aria-label="Remove contact">\u00d7</button></div>`;
+  }).join("");
+}
+document.getElementById("c-add").addEventListener("click",()=>{
+  const nameEl=document.getElementById("c-name"),phoneEl=document.getElementById("c-phone"),socialEl=document.getElementById("c-social");
+  const name=nameEl.value.trim(),phone=phoneEl.value.trim(),social=socialEl.value.trim();
+  if(!name&&!phone&&!social)return;
+  contacts.push({name:name||"(no name)",phone,social});
+  Store.save(CONTACTS_KEY,contacts);
+  nameEl.value="";phoneEl.value="";socialEl.value="";
+  renderContacts();nameEl.focus();
+});
+contactList.addEventListener("click",e=>{const b=e.target.closest(".cc-del");if(!b)return;contacts.splice(+b.dataset.i,1);Store.save(CONTACTS_KEY,contacts);renderContacts();});
+renderContacts();
 const BKEY="hankerson_v2_bingo";
 let bState=Store.load(BKEY,{});
 const bingoEl=document.getElementById("bingo");
